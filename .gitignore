@@ -1,0 +1,20 @@
+backend/.venv/
+backend/__pycache__/
+backend/jemuran.db
+frontend/node_modules/
+frontend/dist/
+# Python
+backend/.Andesisenv/
+backend/.venv/
+backend/__pycache__/
+*.pyc
+
+# Database lokal
+backend/jemuran.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Environment
+.env
