@@ -361,13 +361,17 @@ def get_system_settings() -> Any:
 @auth_required
 def update_system_settings() -> Any:
     """
-    Memperbarui threshold, interval, port serial, dan buzzer.
+    Memperbarui settings di database dan mengirim settings
+    terbaru ke Arduino jika serial mode aktif.
     """
 
     payload = request.get_json(silent=True) or {}
 
     try:
         settings = update_settings(payload)
+
+        if SENSOR_MODE == "serial":
+            runner.send_settings(settings)
 
     except ValueError as error:
         return jsonify({
@@ -378,7 +382,6 @@ def update_system_settings() -> Any:
         "ok": True,
         "settings": settings,
     })
-
 
 # ============================================================
 # ENDPOINT KELOLA RIWAYAT ADMIN
