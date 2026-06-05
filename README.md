@@ -125,5 +125,5 @@ Folder `hasil/` digunakan untuk menyimpan dokumentasi project, seperti screensho
 ## Repository
 
 ```text
-Repository GitHub: [tambahkan link repository]
+Repository GitHub: https://github.com/syahh-coder/sistem-monitoring-jemuran.git
 ```
